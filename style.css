@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./img.jpg)no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+}
+
+.counter-container {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center the text horizontally */
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Add transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Soften border color */
+  border-radius: 10px;
+  color: #ffffff;
+  margin: 0 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease; /* Add smooth transition effect */
+}
+
+.counter-container:hover {
+  transform: translateY(-5px); /* Add slight hover effect */
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3); /* Add box shadow on hover */
+}
+
+.counter {
+  font-size: 35px;
+  font-weight: 600;
+  transition: color 0.3s ease; /* Add color transition effect */
+}
+
+.counter-container:hover .counter {
+  color: #ffcc00; /* Change counter text color on hover */
+}
