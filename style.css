@@ -8,11 +8,11 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  height: 100vh;
+  min-height: 100vh; /* Ensure the body covers the entire viewport */
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(./img.jpg)no-repeat;
+  background: url(./img.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -20,43 +20,47 @@ body {
 h1 {
   text-align: center;
   color: #ffffff;
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 30px; /* Reduce font size for better readability on small screens */
+  margin-bottom: 20px; /* Decrease margin for tighter spacing */
   text-transform: uppercase;
 }
 
 .container {
   display: flex;
+  flex-wrap: wrap; /* Allow container to wrap items on smaller screens */
+  justify-content: center; /* Center items horizontally */
+  max-width: 90%; /* Limit container width for better readability on small screens */
+  margin-top: 20px; /* Add space between heading and countdown */
 }
 
 .counter-container {
-  width: 120px;
-  height: 120px;
+  width: 100px; /* Reduce width for better fit on small screens */
+  height: 100px; /* Adjust height accordingly */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Center the text horizontally */
+  align-items: center;
   text-align: center;
-  background: rgba(255, 255, 255, 0.1); /* Add transparent background */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Soften border color */
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   color: #ffffff;
-  margin: 0 5px;
+  margin: 5px; /* Adjust margin for better spacing */
   text-transform: uppercase;
-  transition: all 0.3s ease; /* Add smooth transition effect */
+  transition: all 0.3s ease;
 }
 
 .counter-container:hover {
-  transform: translateY(-5px); /* Add slight hover effect */
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3); /* Add box shadow on hover */
+  transform: translateY(-3px); /* Reduce hover effect for better usability */
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3); /* Adjust box shadow */
 }
 
 .counter {
-  font-size: 35px;
+  font-size: 25px; /* Decrease font size for better fit on small screens */
   font-weight: 600;
-  transition: color 0.3s ease; /* Add color transition effect */
+  transition: color 0.3s ease;
 }
 
 .counter-container:hover .counter {
-  color: #ffcc00; /* Change counter text color on hover */
+  color: #ffcc00;
 }
